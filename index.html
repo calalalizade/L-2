@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="myVideo" muted = "muted">
+        <source src="./Resources/abstract blue vector background with white lines and dots (plugin plexus for after effects).mp4" type="video/mp4">
+    </video>
+
+    <div class="panel">
+        </iframe>
+        <div class="panel__top">
+            <h1>To-Do List</h1>
+            <img class="sort" src="./Resources/asc_normal.svg" alt="sort">
+        </div>
+
+        <div class="panel__center">
+            <ul class="todo__list" id="myList">
+                <li>
+                    <input type="text" class="task_input" name="task" placeholder="new task">
+                    <input type="image" class="x" name="remove" src="./Resources/x_button.svg" onmouseover="hover(this);" onmouseout="unhover(this);">
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel__bottom">
+            <button id="add_btn">
+                <span class='text'>Add</span>
+                <span class="icon">
+                    <span class="plus" >+</span>
+                </span>
+            </button>
+        </div>
+    </div>
+</body>
+
+<script src ="app.js"></script>
+</html>

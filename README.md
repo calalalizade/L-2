@@ -1,3 +1,3 @@
 # L-2
 
-https://2dolistex.netlify.app/
+Link(netlify): https://2dolistex.netlify.app/

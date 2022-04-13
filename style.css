@@ -26,8 +26,10 @@ body{
 }
 
 .done_list ul li{
+    margin-bottom: 10px;
     padding-bottom: 5px;
     padding-left: 10px;
+    border-bottom: 1px solid #00d2695a
 }
 
 .done_list h2{

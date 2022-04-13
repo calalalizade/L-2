@@ -5,11 +5,13 @@ let sortButton = document.querySelector(".sort");
 // Add New Task to to-do list
 let id = 1;
 add_button.addEventListener('click' , ()=>{
+    // Unhide input field
     if(firstE.style.display === "none"){
         firstE.style.display = "block"; 
         return;
     }
 
+    // Create a new task and add to list
     let itm = firstE;
     let cln = itm.cloneNode(true);
     cln.setAttribute('id' , id)
@@ -17,14 +19,13 @@ add_button.addEventListener('click' , ()=>{
     cln.querySelector("input").setAttribute("value", firstE.querySelector("input").value);
     cln.querySelector(".x").setAttribute("onclick","this.parentElement.remove()");
     document.getElementById("myList").appendChild(cln);
-
     id++;
-     
-    if (firstE.style.display === "none") {
-        firstE.style.display = "block"; 
-    } else {
+    
+    // Hide input field
+    if (firstE.style.display !== "none")
         firstE.style.display = "none";
-    }
+
+    // Clear input field
     firstE.querySelector("input").value = "";
 })
 
@@ -32,12 +33,6 @@ add_button.addEventListener('click' , ()=>{
 // Sort Functionality
 let bool = false;
 sortButton.addEventListener('click', ()=>{
-    if(!bool){
-        sortButton.src = "./Resources/des_normal.svg"
-    }else{
-        sortButton.src = "./Resources/asc_normal.svg"
-    }
-
     let ul = document.getElementById("myList");
     let e = document.getElementsByClassName("task_input");
     let arr = Array.from(e);
@@ -49,8 +44,12 @@ sortButton.addEventListener('click', ()=>{
     
     if(bool){
         arr.reverse();
-    };
+        sortButton.src = "./Resources/asc_normal.svg"
+    }else{
+        sortButton.src = "./Resources/des_normal.svg"
+    }
     
+    // Add sorted version to list
     for(let i = 0; i < arr.length; i++){
         ul.append(arr[i].parentElement);
     }

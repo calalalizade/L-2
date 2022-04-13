@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <video autoplay muted loop id="myVideo" muted = "muted">
-        <source src="./Resources/abstract blue vector background with white lines and dots (plugin plexus for after effects).mp4" type="video/mp4">
+    <video autoplay muted loop id="myVideo" muted>
+        <source src="./Resources/video.mp4" type="video/mp4">
     </video>
     
     <div class="panel">
-        </iframe>
         <div class="panel__top">
             <h1>To-Do List</h1>
             <img class="sort" src="./Resources/asc_normal.svg" alt="sort">
@@ -23,7 +22,7 @@
             <ul class="todo__list" id="myList">
                 <li draggable="true" ondragstart="drag(event)">
                     <input type="text" class="task_input" name="task" placeholder="new task">
-                    <input type="image" class="x" name="remove" src="./Resources/x_button.svg" onmouseover="hover(this);" onmouseout="unhover(this);" onclick="this.parentElement.style.display = 'none'" >
+                    <input type="image" class="x" name="remove" alt="close" src="./Resources/x_button.svg" onmouseover="hover(this);" onmouseout="unhover(this);" onclick="this.parentElement.style.display = 'none'" >
                 </li>
             </ul>
         </div>
@@ -44,7 +43,7 @@
 
         </ul>
     </div>
-</body>
 
-<script src ="app.js"></script>
+    <script src ="app.js"></script>
+</body>
 </html>

@@ -59,7 +59,11 @@ sortButton.addEventListener('click', ()=>{
     let arr = Array.from(e);
 
     let compare = (a, b) => {
-        return a.value - b.value;}
+        return a.value.localeCompare(b.value, undefined, {
+            numeric: true,
+            sensitivity: 'base'
+          });
+        }
 
     arr.sort(compare);
     

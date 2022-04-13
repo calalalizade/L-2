@@ -23,7 +23,7 @@
             <ul class="todo__list" id="myList">
                 <li>
                     <input type="text" class="task_input" name="task" placeholder="new task">
-                    <input type="image" class="x" name="remove" src="./Resources/x_button.svg" onmouseover="hover(this);" onmouseout="unhover(this);">
+                    <input type="image" class="x" name="remove" src="./Resources/x_button.svg" onmouseover="hover(this);" onmouseout="unhover(this);" onclick="this.parentElement.style.display = 'none'" >
                 </li>
             </ul>
         </div>

@@ -4,8 +4,35 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
-    background-color: #d7e1ec;
     overflow:hidden;
+}
+
+.done_list{
+    position: fixed;
+    width: 300px;
+    height: 120vh;
+    background: rgb(255, 255, 255);
+    border: 1px solid #C4C4C4; 
+    border-top: 28px solid #00D26A;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.done_list ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.done_list ul li{
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+.done_list h2{
+    text-align: center;
+    color: #00D26A;
 }
 
 #myVideo{
@@ -40,7 +67,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 
-    border: 1px solid #C4C4C4;
+    border: 1px solid #C4C4C4; 
     border-top: 28px solid #FFDC40;
     border-radius: 10px;
 }

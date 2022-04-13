@@ -2,6 +2,7 @@ let add_button = document.getElementById("add_btn");
 let firstE = document.querySelector("li");
 let sortButton = document.querySelector(".sort");
 
+
 // Add New Task to to-do list
 let id = 1;
 add_button.addEventListener('click' , ()=>{
@@ -54,7 +55,7 @@ add_button.addEventListener('click' , ()=>{
 let bool = false;
 sortButton.addEventListener('click', ()=>{
     let ul = document.getElementById("myList");
-    let e = document.getElementsByClassName("input_task_item");
+    let e = ul.getElementsByClassName("input_task_item");
     let arr = Array.from(e);
 
     let compare = (a, b) => {
@@ -85,3 +86,23 @@ function hover(element) {
 function unhover(element) {
     element.setAttribute('src', './Resources/x_button.svg');
 }
+
+
+// Drag and Drop
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+  
+    function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+  
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    document.getElementById(data).querySelector("input").style.backgroundColor = "#40ffa96b"
+    ev.target.appendChild(document.getElementById(data));
+}
+
+
+

@@ -9,7 +9,7 @@ body{
 
 .done_list{
     position: fixed;
-    width: 300px;
+    width: 20%;
     height: 120vh;
     background: rgb(255, 255, 255);
     border: 1px solid #C4C4C4; 
